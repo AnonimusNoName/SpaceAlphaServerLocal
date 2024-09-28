@@ -7,3 +7,4 @@ class HWID(models.Model):
 class users(models.Model):
     login = models.TextField()
     password = models.TextField()
+    id = models.IntegerField(primary_key=True)

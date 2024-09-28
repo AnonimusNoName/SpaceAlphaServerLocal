@@ -8,7 +8,6 @@ def index(request):
     return HttpResponse("Hello World")
 
 def get_users(request):
-    print(users.objects.get(login="TCHAPCHA").password)
     try:
         if users.objects.get(login=request.GET.get('login')).password == request.GET.get('pass'):
             return HttpResponse("true")
